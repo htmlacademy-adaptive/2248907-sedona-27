@@ -1,0 +1,42 @@
+@import "variables.less";
+
+.advantages__item {
+  position: relative;
+  background-color: #eeeeee;
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    width: 284px;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
+
+  &--with-image {
+    color: @accent-color;
+    background-color: @accent-bg-color;
+  }
+}
+
+.advantages__text {
+  text-align: center;
+  padding-top: 37px;
+}
+
+.advantages__title {
+  margin-bottom: 49px;
+}
+
+.advantages__subtitle {
+  padding-bottom: 40px;
+}
+
+.advantages__sublist {
+  color: @color;
+  background-color: @bg-color;
+
+  padding-top: 23px;
+  padding-bottom: 46px;
+}

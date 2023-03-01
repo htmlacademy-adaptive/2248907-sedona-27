@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <div class="page__container">
     <header class="header">
       <a class="header__logo">
-        <img class="header__logo-image" src="source/img/sedona.svg" width="185" height="95"
+        <img class="header__logo-image" src="img/sedona.svg" width="185" height="95"
           alt="Логотип сайта города Седона.">
       </a>
       <nav class="nav">
@@ -18,99 +19,103 @@
             меню</span></button>
         <button class="nav__toggle nav__toggle--close-menu nav__toggle--hidden" type="button"><span
             class="visually-hidden">Закрыть меню</span></button>
-        <ul class="nav__list nav__list--hidden">
+        <ul class="nav__list nav__list--open list">
           <li class="nav__item">
-            <a class="nav__link" href="index.html">Главная</a>
+            <a class="nav__link link" href="index.html">Главная</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="catalog.html">Фото и видео</a>
-          </li>
-          <li class="nav__item nav__item--active">
-            <a class="nav__link" href="form.html">Форма отзыва</a>
+            <a class="nav__link link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+            <a class="nav__link nav__item--active link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link link" href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main">
-      <h1 class="visually-hidden">Сайт города Седона</h1>
+      <div class="page__header">
+        <div class="hero"></div>
+        <h1 class="page__title title">Оставьте свой отзыв</h1>
+        <p class="page__subtitle subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
 
       <section class="send-review">
-        <form class="send-review__form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="send-review__form form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="send-review__field-group field-group">
             <legend class="field-group__title">Представьтесь:</legend>
-            <div class="control">
-              <label class="control__label" for="name">Имя<span class="control__required-marker">*</span>:</label>
-              <input class="control__text" type="text" name="name" id="name" value="Пётр" required>
+            <div class="field">
+              <label class="field__label" for="name">Имя<span class="field__required-marker">*</span>:</label>
+              <input class="field__input" type="text" name="name" id="name" value="Пётр" required>
             </div>
-            <div class="control">
-              <label class="control__label" for="surname">Фамилия<span class="control__required-marker">*</span>:</label>
-              <input class="control__input" type="text" name="surname" id="surname" value="Пустота" required>
+            <div class="field">
+              <label class="field__label" for="surname">Фамилия<span class="field__required-marker">*</span>:</label>
+              <input class="field__input" type="text" name="surname" id="surname" value="Пустота" required>
             </div>
-            <div class="control">
-              <label class="control__label" for="patronymic">Отчество:</label>
-              <input class="control__input" type="text" name="patronymic" id="patronymic" value="Викторович">
+            <div class="field">
+              <label class="field__label" for="patronymic">Отчество:</label>
+              <input class="field__input" type="text" name="patronymic" id="patronymic" value="Викторович">
             </div>
           </fieldset>
           <fieldset class="send-review__field-group field-group">
             <legend class="field-group__title">Контактная информация:</legend>
-            <div class="control">
-              <label class="control__label" for="phone">Контактный телефон<span class="control__required-marker">*</span>:</label>
-              <input class="control__input control__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+            <div class="field">
+              <label class="field__label" for="phone">Контактный телефон<span class="field__required-marker">*</span>:</label>
+              <input class="field__input field__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
             </div>
-            <div class="control">
-              <label class="control__label" for="email">Электронная почта<span class="control__required-marker">*</span>:</label>
-              <input class="control__input control__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+            <div class="field">
+              <label class="field__label" for="email">Электронная почта<span class="field__required-marker">*</span>:</label>
+              <input class="field__input field__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
             </div>
           </fieldset>
           <fieldset class="send-review__field-group field-group">
             <legend class="field-group__title">Ваше общее впечатление:</legend>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="radio" name="impression" checked>
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__label">Скорее положительное</span>
+              <span class="field__mark field__mark--radio"></span>
+              <span class="field__label field__label--for-mark">Скорее положительное</span>
             </div>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="radio" name="impression">
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__label">Скорее отрицательное</span>
+              <span class="field__mark field__mark--radio"></span>
+              <span class="field__label field__label--for-mark">Скорее отрицательное</span>
             </div>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="radio" name="impression">
-              <span class="control__mark control__mark--radio"></span>
-              <span class="control__label">Затрудняюсь ответить</span>
+              <span class="field__mark field__mark--radio"></span>
+              <span class="field__label field__label--for-mark">Затрудняюсь ответить</span>
             </div>
           </fieldset>
           <fieldset class="send-review__field-group field-group">
             <legend class="field-group__title">Посещенные достопримечательности:</legend>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="checkbox" name="devil-bridge" checked>
-              <span class="control__mark control__mark--checkbox"></span>
-              <span class="control__label">Мост Дьявола</span>
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__label field__label--for-mark">Мост Дьявола</span>
             </div>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="checkbox" name="mount-bell" checked>
-              <span class="control__mark control__mark--checkbox"></span>
-              <span class="control__label">Гора-Колокол</span>
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__label field__label--for-mark">Гора-Колокол</span>
             </div>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="checkbox" name="slide-park" checked>
-              <span class="control__mark control__mark--checkbox"></span>
-              <span class="control__label">Слайд-парк</span>
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__label field__label--for-mark">Слайд-парк</span>
             </div>
-            <div class="control">
+            <div class="field">
               <input class="visually-hidden" type="checkbox" name="red-rocks">
-              <span class="control__mark control__mark--checkbox"></span>
-              <span class="control__label">Красные скалы</span>
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__label field__label--for-mark">Красные скалы</span>
             </div>
           </fieldset>
           <fieldset class="send-review__field-group field-group">
             <legend class="field-group__title">Опишите свои эмоции:</legend>
-            <div class="control">
-              <textarea class="control__textarea" id="emotions" name="emotions">Опишите подробно все свои восторги</textarea>
+            <div class="field">
+              <textarea class="field__textarea" id="emotions" name="emotions">Опишите подробно все свои восторги</textarea>
             </div>
           </fieldset>
           <button class="send-review__send-button button" type="submit">Отправить отзыв</button>
@@ -121,7 +126,7 @@
 
     <footer class="footer footer-container">
       <h2 class="footer__hashtag">#VisitSedona</h2>
-      <ul class="socials">
+      <ul class="socials list">
         <li class="socials__item">
           <a class="socials__link" href="https://vk.com/htmlacademy">
             <svg class="socials__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
@@ -151,9 +156,9 @@
           </a>
         </li>
       </ul>
-      <a class="htmlacademy-logo" href="https://htmlacademy.ru/">
+      <a class="footer__htmlacademy-logo" href="https://htmlacademy.ru/">
         Разработано
-        <svg class="htmlacademy-logo__image" aria-hidden="true" focusable="false" width="27" height="34"
+        <svg class="footer__htmlacademy-logo-img" aria-hidden="true" focusable="false" width="27" height="34"
           viewBox="0 0 320 233" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HTMLAcademy.">
           <rect opacity="0.9" width="320" height="233" fill="white" />
         </svg>
@@ -164,8 +169,8 @@
   <div class="modal modal--error modal--close">
     <div class="modal__container">
       <section class="modal__content">
-        <h2 class="modal__title">Что-то пошло не так!</h2>
-        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <h2 class="modal__title title">Что-то пошло не так!</h2>
+        <p class="modal__text subtitle">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal__button-ok button" type="button">Ok</button>
       </section>
     </div>
@@ -174,8 +179,8 @@
   <div class="modal modal--success modal--close">
     <div class="modal__container">
       <section class="modal__content">
-        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
+        <p class="modal__text subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         <button class="modal__button-сlose button" type="button">Закрыть окно</button>
       </section>
     </div>

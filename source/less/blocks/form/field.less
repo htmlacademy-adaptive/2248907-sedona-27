@@ -1,0 +1,26 @@
+.field-text() {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.field__label {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+
+  &--for-mark {
+    .field-text;
+    text-transform: none;
+  }
+}
+
+.field__input {
+  font-family: inherit;
+  .field-text;
+}
+
+.field__textarea {
+  .field-text;
+}
